@@ -1,0 +1,85 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Happy everyday</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/sliding_effect.js"></script>
+<style type="text/css">
+<!--
+#Layer1 {
+	position:absolute;
+	left:12px;
+	top:153px;
+	width:107px;
+	height:39px;
+	z-index:-2;
+}
+#Layer2 {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+	z-index:1;
+	left: 1px;
+}
+-->
+</style>
+<script>
+
+
+window.onload = function(){
+  var run = document.getElementById("navigation-block");
+  var speed = 1;
+  var timer = null;
+  var alpha=30;
+  run.onmouseover = function(){
+    startrun(100);
+  }
+  run.onmouseout = function(){
+    startrun(30);
+  }
+  function startrun(target){
+    clearInterval(timer);
+    timer = setInterval(function(){
+      if(target > alpha){
+        speed = 2;
+      }else{
+        speed = -2;
+      }
+      
+      if(alpha == target){
+        clearInterval(timer);
+      }
+      else{
+        alpha = alpha + speed;
+        run.style.filter = 'alpha(opacity='+alpha+')';
+        run.style.opacity = alpha/100;
+        document.title = alpha;
+      }
+    },20)
+  }
+}
+</script>
+</head>
+<body>
+<div id="navigation-block" style="opacity:0.2" onmouseover="change()">
+  <ul id="sliding-navigation">
+    <li class="sliding-element">
+      <h3>lv ♥ xiu</h3>
+    </li>
+	<li class="sliding-element"><a href="xiu.html"><img src="images/home.gif"/>The Home</a></li>
+    <li class="sliding-element"><a href="say.html" target="left">I want to say</a></li>
+    <li class="sliding-element"><a href="picture.html" target="left">Your unique beauty</a></li>
+    <li class="sliding-element"><a href="food.html" target="left">The food you cook</a></li>
+    <li class="sliding-element"><a href="happy.html" target="left">&nbsp;Happy everyday</a></li>
+  </ul>
+</div>
+
+<div id="Layer2">
+  <iframe frameborder="0" src="xiumain.html" scrolling="no" width="100%" height="100%" id="left" name="left"></iframe>
+</div>
+</body>
+</html>

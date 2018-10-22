@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/typer.js"></script>
+<script src="js/proton-1.0.0.min.js"></script>
+<script src="js/jProton.js"></script>
+<script src="js/jHotspot.js"></script>
+
+
+<link rel="stylesheet" href="css/bing.css" />
+
+
+<style type="text/css">
+html {
+	padding: 0; /* firefox for IE 7.0 */
+	_padding: 100px 0 0 200px; /*IE 6.0*/
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	font-family: 'Consolas', 'Share Tech Mono', 'PT Mono', 'Share Tech Mono',
+		'Coda', 'Play', "Hiragino Sans GB", "Microsoft YaHei",
+		"Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "WenQuanYi Zen Hei",
+		"WenQuanYi Zen Hei", "Apple LiGothic Medium", "SimHei", "ST Heiti",
+		"WenQuanYi Zen Hei Sharp";
+	background-color: gray;
+	background-image:url(images/ct.jpg)
+}
+
+.m-player {
+	position: absolute;
+	top: 2px;
+}
+
+#bgCanvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+}
+
+#codeArea {
+	color: white;
+	margin-top: 32px;
+	display: inline-block;
+}
+
+.tip-twitter {
+	max-width: 400px;
+}
+
+.tip-twitter .tip-inner {
+	font-size: 12.0pt;
+	font-weight: normal;
+}
+</style>
+<style>
+.code-line {
+	line-height: 5.0pt;
+	font-size: 12.0pt;
+}
+
+.code-keyword {
+	font-weight: bold;
+	color: #00D0D0;
+}
+
+.code-method {
+	color: #D0D0D0;
+}
+
+.code-method-def {
+	font-weight: bold;
+	color: #BED6FF;
+}
+
+.code-class {
+	color: #FF8080;
+}
+
+.code-var {
+	color: #BED6FF;
+}
+
+.code-var-call {
+	color: #79ABFF;
+}
+
+.code-bracket {
+	color: #D0D0D0;
+}
+
+.code-block-comment {
+	color:#FFFFFF;
+	font-family:"Times New Roman", Times, serif;
+	font-style:inherit;
+	font-size:18px;
+}
+
+.code-str {
+	color: #DC78DC;
+}
+
+.code-line-comment {
+	color: #00E000;
+}
+</style>
+<script>
+$(function(){
+$('#codeArea').typer({delay : 140});
+});
+
+</script>
+<script type="text/javascript">
+	//<![CDATA[
+	$(function() {
+		$('.hotspot').hotspot();
+		//return;
+		var reportDialog = $('#report-dialog');
+		var content = reportDialog.find('.modal-body');
+		var ok = true;
+		if (Modernizr.canvas) {
+			$('#bgCanvas').Proton({
+			});
+			$('#bgCanvas').data('jProton').tick();
+
+		} else {
+			content.append($('<p>不支持canvas。</p>'));
+			ok = false;
+			$('body')
+					.append(
+							$('<div id="bgCanvas" style="background-color:black;"></div>'));
+		}
+		if (!ok) {
+			reportDialog.modal();
+		}
+	
+	});
+	// ]]>
+</script>
+</head>
+
+<body>
+
+<canvas id="bgCanvas"></canvas>
+
+	<div class="hotspot" style="left: 75%; top: 32%">
+		<div class="hotspot-ct">
+			<div class="hotspot-inner"></div>
+		</div>
+	</div>
+	<div class="hottip">
+		<p>一个人在无锡，要自己照顾好自己</p>
+		<div class="hottip-bg"></div>
+	</div>
+
+	<div class="hotspot" style="left: 65%; top: 82%">
+		<div class="hotspot-ct">
+			<div class="hotspot-inner"></div>
+		</div>
+	</div>
+	<div class="hottip">
+		<p>嘿嘿，我是不是话有点多了</p>
+		<div class="hottip-bg"></div>
+	</div>
+	<div class="hotspot" style="left: 55%; top: 12%">
+		<div class="hotspot-ct">
+			<div class="hotspot-inner"></div>
+		</div>
+	</div>
+	<div class="hottip">
+		<p><img src="images/2.jpg" /></p>
+		<div class="hottip-bg"></div>
+	</div>
+
+	<div class="hotspot" style="left: 80%; top: 68%">
+		<div class="hotspot-ct">
+			<div class="hotspot-inner"></div>
+		</div>
+	</div>
+	<div class="hottip">
+		<p>每天都要开开心心的，不要有烦恼</p>
+		<div class="hottip-bg"></div>
+	</div>
+	
+<div id="codeArea">
+			<p class="code-line" title="第一次见到你是在初中。">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-block-comment">*
+					The first time I saw you was in junior high school. </span>
+			</p>
+			<p class="code-line" title="我们互不相识，擦肩而过。">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-block-comment">*
+					AS we walked on,we do not know each other.
+					</span>
+			</p>
+			<p class="code-line" title="心中一直留下了那个漂亮大姐姐的形象。">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-block-comment">*
+					Beautiful sister's image has remained in the minds of me</span>
+			</p>
+			<p class="code-line" title="时间转瞬即逝，现在，我通过网络找到了你。">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-block-comment">*
+					Time is fleeting,I find you through the network now.
+					</span>
+			</p>
+			<p class="code-line" title="我想我可能是喜欢上你了。">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-block-comment">*
+					I think I maybe love you
+					</span>
+			</p>
+			<p class="code-line" title="不仅仅再是那个很久之前的那个模糊记忆，而是一个真实的温和的你。">
+				&nbsp;&nbsp;&nbsp; &nbsp;<span class="code-block-comment">*
+					That is not only vague memories of that long ago, but a real gentle you
+					 </span>
+			</p>
+			<p class="code-line" title="我想让你了解我心所想。">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+					class="code-line-comment">// I want you know something in my
+					heart,</span>
+			</p>
+			<p class="code-line" title="所以我写了一些东西。">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+					class="code-line-comment">// so I write something. </span>
+			</p>
+			<p class="code-line" title="来看看吧。">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+					class="code-line-comment">// And show it to you. </span>
+			</p>
+			<p class="code-line" title="每次都很想和你聊天，尽管聊的挺累。">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+					class="code-line-comment">// Every time I want to chat with you, though tiring chat</span>
+			</p>
+			<p class="code-line" title="可是长久的‘恩’‘恩’还是会让我不舒服啊，脸皮厚也会有脆弱的时候的呀。">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+					class="code-line-comment">//Every time your ‘ah’ Occasionally make me uncomfortable，
+					because the thick skin also can have a weak moment</span>
+			</p>
+			<p class="code-line" title="像这次就憋了好久没和你聊呢。">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+					class="code-line-comment">//Like this,I  hold a long time to not chat with you</span>
+			</p>
+			<p class="code-line" title="嘿嘿，有点小孩子心态了啊。">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+					class="code-line-comment">//Hey, I was a little child mentality.</span>
+			</p>
+			<p class="code-line" title="不管怎样，还是希望我们大笨能每天开心快乐。">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+					class="code-line-comment">//Anyway, I still hope that da ben can be happy every day happy.</span>
+			</p>
+			<p class="code-line">
+				<span class="code-line-comment">// 看不懂？把鼠标移到看不懂的地方停一会试试。 </span>
+			</p>
+			
+		</div>
+		
+	
+		  <embed src="music/张靓颖 - 终于等到你.mp3" width=0 height=0  loop="true" autostart="true" volume="0"></embed>
+</body>
+</html>

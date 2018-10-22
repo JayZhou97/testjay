@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>happy everyday</title>
+<SCRIPT type=text/javascript src="js/swfobject.js"></SCRIPT>
+<style type="text/css">
+<!--
+#Layer1 {
+	bottom:0px;
+	z-index:1;
+	left:0px;
+	width:100%;
+}
+#Layer2 {
+    position:relative;
+	top:80%;
+	z-index:1;
+	left:60px;
+}
+#loader{
+    position:absolute;
+    width:80%;
+	z-index:2;
+	left:22px;
+	top:211px;
+}
+#Layer3 {
+	position:absolute;
+	left:13px;
+	top:61px;
+	width:100%;
+	height:142px;
+	z-index:2;
+}
+-->
+</style>
+</head>
+<body background="images/bghappy.jpg" style="text-align:center">
+<div id="Layer3">
+<marquee direction="left" behavior="alternate" loop="-1"><img src="images/dt.jpg" /></marquee></div>
+<div id="Layer1" align="center">
+  
+	
+</div>
+ <embed src="music/爱朵女孩 - 祝你快乐.mp3" width=0 height=0  loop="true" autostart="true" volume="0"></embed>
+ <DIV id=loader align=center>
+ Loading... </DIV>
+<SCRIPT type=text/javascript>
+var so = new SWFObject("swf/viewer.swf", "sotester", "1300", "480", "9", "#000000");
+so.addParam("wmode", "opaque");
+so.addParam("flashvars", "&xmlLocation=images/nifengla.xml");
+so.write("loader");
+</SCRIPT>
+</body>
+</html>
